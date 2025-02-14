@@ -2,3 +2,9 @@
 1739370655451	Rename type 'RestWithSpringBootAndJavaErudio1ApplicationTests'
 1739370714092	Delete elements
 1739370751816	Rename resource 'application.properties'
+1739532968316	Delete element
+1739533034222	Rename type 'GreetingController'
+1739540139811	Rename type 'UnsuporthedMathException'
+1739562578027	Rename package 'com.example.demo'
+1739562599139	Rename package 'com.example.demo.exceptions'
+1739562617608	Rename package 'com.example.demo.exceptionsHandler'

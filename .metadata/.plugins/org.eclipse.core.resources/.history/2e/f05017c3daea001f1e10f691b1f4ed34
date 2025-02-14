@@ -1,0 +1,5 @@
+package com.example.demo.exceptionsHandler;
+
+public class CustomizedResponseEntityExceptionHandler {
+
+}
