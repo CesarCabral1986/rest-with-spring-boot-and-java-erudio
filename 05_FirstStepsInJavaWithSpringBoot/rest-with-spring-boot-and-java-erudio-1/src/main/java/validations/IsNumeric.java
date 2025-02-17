@@ -2,7 +2,7 @@ package validations;
 
 public class IsNumeric {	
 
-	public boolean isNumeric(String strNumber) {
+	public static boolean isNumeric(String strNumber) {
 
 		if (strNumber == null)
 			return false;

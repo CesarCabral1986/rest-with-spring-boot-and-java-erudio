@@ -6,99 +6,75 @@ import validations.IsNumeric;
 
 public class MathCalculations {
 
-	public double sum(String numberOne, String numberTwo) throws Exception {
+	public static double sum(String numberOne, String numberTwo) throws Exception {
 
-		IsNumeric isNumeric = new IsNumeric();
-
-		if (!isNumeric.isNumeric(numberOne) || !isNumeric.isNumeric(numberTwo)) {
+		if (!IsNumeric.isNumeric(numberOne) || !IsNumeric.isNumeric(numberTwo)) {
 
 			throw new UnsuporthedMathOperationException("Please set a numeric value!");
 
 		}
 
-		ConvertTodouble convertDouble = new ConvertTodouble();
-
-		return convertDouble.convertToDouble(numberOne) + convertDouble.convertToDouble(numberTwo);
+		return ConvertTodouble.convertToDouble(numberOne) + ConvertTodouble.convertToDouble(numberTwo);
 
 	}
 
-	public double sub(String numberOne, String numberTwo) throws Exception {
+	public static double sub(String numberOne, String numberTwo) throws Exception {
 
-		IsNumeric isNumeric = new IsNumeric();
-
-		if (!isNumeric.isNumeric(numberOne) || !isNumeric.isNumeric(numberTwo)) {
+		if (!IsNumeric.isNumeric(numberOne) || !IsNumeric.isNumeric(numberTwo)) {
 
 			throw new UnsuporthedMathOperationException("Please set a numeric value!");
 
 		}
 
-		ConvertTodouble convertDouble = new ConvertTodouble();
-
-		return convertDouble.convertToDouble(numberOne) - convertDouble.convertToDouble(numberTwo);
+		return ConvertTodouble.convertToDouble(numberOne) - ConvertTodouble.convertToDouble(numberTwo);
 
 	}
 
-	public double mult(String numberOne, String numberTwo) throws Exception {
+	public static double mult(String numberOne, String numberTwo) throws Exception {
 
-		IsNumeric isNumeric = new IsNumeric();
-
-		if (!isNumeric.isNumeric(numberOne) || !isNumeric.isNumeric(numberTwo)) {
+		if (!IsNumeric.isNumeric(numberOne) || !IsNumeric.isNumeric(numberTwo)) {
 
 			throw new UnsuporthedMathOperationException("Please set a numeric value!");
 
 		}
 
-		ConvertTodouble convertDouble = new ConvertTodouble();
-
-		return convertDouble.convertToDouble(numberOne) * convertDouble.convertToDouble(numberTwo);
+		return ConvertTodouble.convertToDouble(numberOne) * ConvertTodouble.convertToDouble(numberTwo);
 
 	}
-	
-	public double div(String numberOne, String numberTwo) throws Exception {
 
-		IsNumeric isNumeric = new IsNumeric();
+	public static double div(String numberOne, String numberTwo) throws Exception {
 
-		if (!isNumeric.isNumeric(numberOne) || !isNumeric.isNumeric(numberTwo)) {
+		if (!IsNumeric.isNumeric(numberOne) || !IsNumeric.isNumeric(numberTwo)) {
 
 			throw new UnsuporthedMathOperationException("Please set a numeric value!");
 
 		}
 
-		ConvertTodouble convertDouble = new ConvertTodouble();
-
-		return convertDouble.convertToDouble(numberOne) / convertDouble.convertToDouble(numberTwo);
+		return ConvertTodouble.convertToDouble(numberOne) / ConvertTodouble.convertToDouble(numberTwo);
 
 	}
-	
-	public double med(String numberOne, String numberTwo) throws Exception {
 
-		IsNumeric isNumeric = new IsNumeric();
+	public static double med(String numberOne, String numberTwo) throws Exception {
 
-		if (!isNumeric.isNumeric(numberOne) || !isNumeric.isNumeric(numberTwo)) {
+		if (!IsNumeric.isNumeric(numberOne) || !IsNumeric.isNumeric(numberTwo)) {
 
 			throw new UnsuporthedMathOperationException("Please set a numeric value!");
 
 		}
 
-		ConvertTodouble convertDouble = new ConvertTodouble();
-
-		return (convertDouble.convertToDouble(numberOne) + convertDouble.convertToDouble(numberTwo)) / 2;
+		return (ConvertTodouble.convertToDouble(numberOne) + ConvertTodouble.convertToDouble(numberTwo)) / 2;
 
 	}
-	
-	public double square(String number) throws Exception {
 
-		IsNumeric isNumeric = new IsNumeric();
+	public static double square(String number) throws Exception {
 
-		if (!isNumeric.isNumeric(number)){
+		if (!IsNumeric.isNumeric(number)) {
 
 			throw new UnsuporthedMathOperationException("Please set a numeric value!");
 
 		}
 
-		ConvertTodouble convertDouble = new ConvertTodouble();
-
-		return Math.sqrt(convertDouble.convertToDouble(number));
+		return Math.sqrt(ConvertTodouble.convertToDouble(number));
 
 	}
 

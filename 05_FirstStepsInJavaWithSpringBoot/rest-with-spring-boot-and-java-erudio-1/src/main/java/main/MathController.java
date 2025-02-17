@@ -1,20 +1,14 @@
 package main;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import calculations.MathCalculations;
-import main.exceptions.UnsuporthedMathOperationException;
 
 @RestController
 public class MathController {
-
-	private final AtomicLong counter = new AtomicLong();
-	MathCalculations maths = new MathCalculations();
 
 	@RequestMapping(value = "/sum/{numberOne}/{numberTwo}", method = RequestMethod.GET)
 	public Double sum(@PathVariable(value = "numberOne") String numberOne,
@@ -22,7 +16,7 @@ public class MathController {
 
 	) throws Exception {
 
-		return maths.sum(numberOne, numberTwo);
+		return MathCalculations.sum(numberOne, numberTwo);
 
 	}
 
@@ -32,7 +26,7 @@ public class MathController {
 
 	) throws Exception {
 
-		return maths.sub(numberOne, numberTwo);
+		return MathCalculations.sub(numberOne, numberTwo);
 
 	}
 
@@ -42,7 +36,7 @@ public class MathController {
 
 	) throws Exception {
 
-		return maths.mult(numberOne, numberTwo);
+		return MathCalculations.mult(numberOne, numberTwo);
 
 	}
 
@@ -52,7 +46,7 @@ public class MathController {
 
 	) throws Exception {
 
-		return maths.div(numberOne, numberTwo);
+		return MathCalculations.div(numberOne, numberTwo);
 
 	}
 
@@ -62,7 +56,7 @@ public class MathController {
 
 	) throws Exception {
 
-		return maths.med(numberOne, numberTwo);
+		return MathCalculations.med(numberOne, numberTwo);
 
 	}
 
@@ -71,7 +65,7 @@ public class MathController {
 
 	) throws Exception {
 
-		return maths.square(number);
+		return MathCalculations.square(number);
 
 	}
 }
